@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { getJobById, getCompanyById } from '@/lib/data'
 
-export default function JobDetails({ params }) {
-  const job = getJobById(params.id)
+export default async function JobDetails({ params }) {
+  const { id } = await params
+  const job = getJobById(id)
   const company = job ? getCompanyById(job.companyId) : null
 
   if (!job) {

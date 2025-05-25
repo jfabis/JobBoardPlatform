@@ -2,9 +2,10 @@ import Link from 'next/link'
 import JobCard from '@/components/JobCard'
 import { getCompanyById, getJobsByCompany } from '@/lib/data'
 
-export default function CompanyDetails({ params }) {
-  const company = getCompanyById(params.id)
-  const companyJobs = getJobsByCompany(params.id)
+export default async function CompanyDetails({ params }) {
+  const { id } = await params
+  const company = getCompanyById(id)
+  const companyJobs = getJobsByCompany(id)
 
   if (!company) {
     return (
@@ -16,7 +17,7 @@ export default function CompanyDetails({ params }) {
       </div>
     )
   }
-
+  
   return (
     <div>
       {/* Company Header */}
