@@ -5,7 +5,7 @@ export default function Header() {
     <header className="bg-white shadow-sm border-b">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-blue-600">
-          JobBoard
+          FluffyJobs
         </Link>
         <div className="flex space-x-6">
           <Link href="/jobs" className="hover:text-blue-600">Jobs</Link>

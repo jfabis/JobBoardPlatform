@@ -2,7 +2,7 @@ import './globals.css'
 import Header from '@/components/Header'
 
 export const metadata = {
-  title: 'Job Board Platform',
+  title: 'FluffyJobs',
   description: 'Find your dream job or hire the best talent',
 }
 
